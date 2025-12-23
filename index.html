@@ -4,33 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Boutique de Thaly - Spécialisation vente vêtements pour seniors</title>
-    <link rel="stylesheet" href="style.css">
+    <title>La Boutique de Thaly - Spécialisation vêtements pour seniors</title>
+    <meta name="description"
+        content="Découvrez nos vêtements adaptés pour seniors. Confort et élégance pour les résidents d'EHPAD et maisons de retraite.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css?v=1.0">
+
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img src="thaly1.png" alt="La boutique de Thaly" height="130" width="220">
-            <div class="logo">La Boutique de Thaly</div>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#catalogues">Catalogues</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="#accueil" class="logo-link">
+                    <img src="assets/logo.png" alt="La Boutique de Thaly" class="logo-img">
+                    <span class="logo-text">La Boutique de Thaly</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-links" id="mainNav">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#catalogues" class="nav-link">Catalogues</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="accueil" class="hero">
-        <h1 class="fade-in">Spécialisation vente de vêtements pour seniors</h1>
-        <p class="fade-in-delay">Des collections élégantes et confortables spécialement conçues pour les résidents en
-            EHPAD et maisons de retraite</p>
+        <h1>Spécialisation vente de vêtements pour seniors</h1>
+        <p>Des collections élégantes et confortables spécialement conçues pour les résidents en EHPAD et maisons de
+            retraite</p>
         <a href="#catalogues" class="cta-button">Découvrir nos catalogues</a>
     </section>
 
-    <!-- NOUVELLE SECTION GALERIE CARROUSEL -->
     <section id="galerie" class="gallery-section">
         <div class="section">
             <h2>Notre Galerie</h2>
@@ -40,44 +56,34 @@
                 <div class="carousel-wrapper">
                     <div class="carousel-track" id="carouselTrack">
                         <div class="carousel-slide">
-                            <img src="img3.jpeg" height="150" width="150" alt="Collection 1">
-                            <div class="carousel-caption"></div>
+                            <img src="img3.jpeg" alt="Collection 1">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img7.jpeg" height="150" width="150" alt="Collection 2">
-                            <div class="carousel-caption"></div>
+                            <img src="img7.jpeg" alt="Collection 2">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img5.jpeg" height="150" width="150" alt="Collection 3">
-                            <div class="carousel-caption"></div>
+                            <img src="img5.jpeg" alt="Collection 3">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img4.jpeg" height="150" width="150" alt="Collection 4">
-                            <div class="carousel-caption"></div>
+                            <img src="img4.jpeg" alt="Collection 4">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img1.jpeg" height="150" width="150" alt="Collection 5">
-                            <div class="carousel-caption"></div>
+                            <img src="img1.jpeg" alt="Collection 5">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img6.jpeg" height="150" width="150" alt="Collection 6">
-                            <div class="carousel-caption"></div>
+                            <img src="img6.jpeg" alt="Collection 6">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img2.jpeg" height="150" width="150" alt="Collection 7">
-                            <div class="carousel-caption"></div>
+                            <img src="img2.jpeg" alt="Collection 7">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img8.jpeg" height="150" width="150" alt="Collection 8">
-                            <div class="carousel-caption"></div>
+                            <img src="img8.jpeg" alt="Collection 8">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img9.jpeg" height="150" width="150" alt="Collection 9">
-                            <div class="carousel-caption"></div>
+                            <img src="img9.jpeg" alt="Collection 9">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img10.jpeg" height="150" width="150" alt="Collection 10">
-                            <div class="carousel-caption"></div>
+                            <img src="img10.jpeg" alt="Collection 10">
                         </div>
                     </div>
                 </div>
@@ -85,7 +91,6 @@
                 <button class="carousel-btn next-btn" onclick="moveCarousel(1)">❯</button>
             </div>
 
-            <!-- Indicateurs de slides -->
             <div class="carousel-indicators" id="carouselIndicators"></div>
         </div>
     </section>
@@ -94,23 +99,23 @@
         <h2>Nos Services</h2>
         <div class="features">
             <div class="feature-card">
-                <div class="feature-icon"><img src="icon5.png" height="80" width="80"></div>
+                <div class="feature-icon"><img src="assets/vêtements.png" alt="Vêtements adaptés"></div>
                 <h3>Vêtements Adaptés</h3>
                 <p>Des tenues conçues avec des ouvertures facilitées, tissus doux et confortables pour un habillage
                     simplifié.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="icon3.png" height="80" width="80"></div>
+                <div class="feature-icon"><img src="assets/maison.png" alt="Spécialiste"></div>
                 <h3>Spécialiste maisons de retraite</h3>
                 <p>Une expertise reconnue dans l'équipement des établissements et le bien-être des résidents.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="icon2.png" height="80" width="80"></div>
+                <div class="feature-icon"><img src="assets/livraison.png" alt="Livraison"></div>
                 <h3>Livraison Rapide</h3>
                 <p>Service de livraison adapté aux établissements avec suivi personnalisé de vos commandes.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="icon4.png" height="90" width="90"></div>
+                <div class="feature-icon"><img src="assets/conseil.png" alt="Conseil"></div>
                 <h3>Conseil Personnalisé</h3>
                 <p>Notre équipe vous accompagne pour choisir les tenues les plus adaptées à vos besoins.</p>
             </div>
@@ -122,28 +127,26 @@
             <h2>Nos Catalogues</h2>
             <div class="catalog-grid">
                 <div class="catalog-card">
-                    <img src="icon1.png" height="70" width="70">
-                    <h3> Collection Femme</h3>
+                    <img src="icon1.png" alt="Collection Femme">
+                    <h3>Collection Femme</h3>
                     <p>Découvrez nos tenues pour femme</p>
-                    <a href="OIF.pdf" download class="catalog-link">
-                        Télécharger le catalogue
-                    </a>
+                    <a href="OIF.pdf" download class="catalog-link">Télécharger le catalogue</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="icon1.png" height="70" width="70">
-                    <h3> Collection Homme</h3>
+                    <img src="icon1.png" alt="Collection Homme">
+                    <h3>Collection Homme</h3>
                     <p>Découvrez nos tenues pour homme</p>
                     <a href="#" class="catalog-link">Télécharger le catalogue</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="icon1.png" height="70" width="70">
-                    <h3> Linge de Nuit</h3>
-                    <p>Pyjamas et chemises de nuit adaptés </p>
+                    <img src="icon1.png" alt="Linge de Nuit">
+                    <h3>Linge de Nuit</h3>
+                    <p>Pyjamas et chemises de nuit adaptés</p>
                     <a href="#" class="catalog-link">Télécharger le catalogue</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="icon1.png" height="70" width="70">
-                    <h3> Accessoires</h3>
+                    <img src="icon1.png" alt="Accessoires">
+                    <h3>Accessoires</h3>
                     <p>Bonnets, écharpes et accessoires pratiques</p>
                     <a href="Accessite1.pdf" class="catalog-link">Télécharger le catalogue</a>
                 </div>
@@ -172,7 +175,7 @@
 
             <div class="contact-form-wrapper">
                 <h3>Envoyez-nous un message</h3>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nom">Nom *</label>
@@ -224,12 +227,12 @@
         </div>
 
         <div class="social-links">
-            <a href="https://facebook.com" target="_blank" class="social-icon"><img src="icon8.png" height="30"
-                    width="30"></a>
-            <a href="https://linkedin.com" target="_blank" class="social-icon"><img src="icon7.png" height="30"
-                    width="30"></a>
-            <a href="https://instagram.com" target="_blank" class="social-icon"><img src="icon6.png" height="30"
-                    width="30"></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon"><img src="assets/facebook.png"
+                    alt="Facebook"></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><img src="assets/linkedin.png"
+                    alt="LinkedIn"></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><img src="assets/instagram.png"
+                    alt="Instagram"></a>
         </div>
     </section>
 
@@ -240,95 +243,7 @@
         <p>&copy; 2025 La Boutique de Thaly - Tous droits réservés</p>
     </footer>
 
-    <script>
-        // CAROUSEL JAVASCRIPT
-        let currentSlide = 0;
-        const track = document.getElementById('carouselTrack');
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
 
-        // Créer les indicateurs
-        const indicatorsContainer = document.getElementById('carouselIndicators');
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('span');
-            dot.className = 'indicator-dot';
-            dot.onclick = () => goToSlide(i);
-            indicatorsContainer.appendChild(dot);
-        }
-
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-            // Mettre à jour les indicateurs
-            document.querySelectorAll('.indicator-dot').forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function moveCarousel(direction) {
-            currentSlide += direction;
-
-            if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
-            } else if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            }
-
-            updateCarousel();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateCarousel();
-        }
-
-        // Défilement automatique toutes les 5 secondes
-        setInterval(() => {
-            moveCarousel(1);
-        }, 5000);
-
-        // Initialiser le carrousel
-        updateCarousel();
-
-        // RESTE DU JAVASCRIPT
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
-            this.reset();
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animation au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.feature-card, .catalog-card, .contact-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 
 </html>
