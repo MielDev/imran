@@ -7,11 +7,12 @@
     <title>La Boutique de Thaly - Spécialisation vêtements pour seniors</title>
     <meta name="description"
         content="Découvrez nos vêtements adaptés pour seniors. Confort et élégance pour les résidents d'EHPAD et maisons de retraite.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2.0">
 
 
 </head>
@@ -26,7 +27,8 @@
                 </a>
             </div>
 
-            <button class="mobile-menu-toggle" onclick="toggleMenu()">
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Menu mobile" aria-expanded="false"
+                aria-controls="mainNav">
                 <span class="hamburger"></span>
             </button>
 
@@ -56,34 +58,34 @@
                 <div class="carousel-wrapper">
                     <div class="carousel-track" id="carouselTrack">
                         <div class="carousel-slide">
-                            <img src="img3.jpeg" alt="Collection 1">
+                            <img src="assets/image1.jpeg" alt="Collection 1">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img7.jpeg" alt="Collection 2">
+                            <img src="assets/image2.jpeg" alt="Collection 2">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img5.jpeg" alt="Collection 3">
+                            <img src="assets/image3.jpeg" alt="Collection 3">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img4.jpeg" alt="Collection 4">
+                            <img src="assets/image4.jpeg" alt="Collection 4">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img1.jpeg" alt="Collection 5">
+                            <img src="assets/image5.jpeg" alt="Collection 5">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img6.jpeg" alt="Collection 6">
+                            <img src="assets/image6.jpeg" alt="Collection 6">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img2.jpeg" alt="Collection 7">
+                            <img src="assets/image7.jpeg" alt="Collection 7">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img8.jpeg" alt="Collection 8">
+                            <img src="assets/image8.jpeg" alt="Collection 8">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img9.jpeg" alt="Collection 9">
+                            <img src="assets/image9.jpeg" alt="Collection 9">
                         </div>
                         <div class="carousel-slide">
-                            <img src="img10.jpeg" alt="Collection 10">
+                            <img src="assets/image10.jpeg" alt="Collection 10">
                         </div>
                     </div>
                 </div>
@@ -127,25 +129,25 @@
             <h2>Nos Catalogues</h2>
             <div class="catalog-grid">
                 <div class="catalog-card">
-                    <img src="icon1.png" alt="Collection Femme">
+                    <img src="assets/catalogue.png" alt="Collection Femme">
                     <h3>Collection Femme</h3>
                     <p>Découvrez nos tenues pour femme</p>
                     <a href="OIF.pdf" download class="catalog-link">Télécharger le catalogue</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="icon1.png" alt="Collection Homme">
+                    <img src="assets/catalogue.png" alt="Collection Homme">
                     <h3>Collection Homme</h3>
                     <p>Découvrez nos tenues pour homme</p>
                     <a href="#" class="catalog-link">Télécharger le catalogue</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="icon1.png" alt="Linge de Nuit">
+                    <img src="assets/catalogue.png" alt="Linge de Nuit">
                     <h3>Linge de Nuit</h3>
                     <p>Pyjamas et chemises de nuit adaptés</p>
                     <a href="#" class="catalog-link">Télécharger le catalogue</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="icon1.png" alt="Accessoires">
+                    <img src="assets/catalogue.png" alt="Accessoires">
                     <h3>Accessoires</h3>
                     <p>Bonnets, écharpes et accessoires pratiques</p>
                     <a href="Accessite1.pdf" class="catalog-link">Télécharger le catalogue</a>
@@ -160,15 +162,24 @@
         <div class="contact-container">
             <div class="contact-info">
                 <div class="contact-card">
-                    <h3>📍 Adresse</h3>
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Adresse</h3>
                     <p>38 rue de la Galopière<br>72000 Le Mans<br>France</p>
                 </div>
                 <div class="contact-card">
-                    <h3>📞 Téléphone</h3>
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Téléphone</h3>
                     <p>+33 (0)6 02 16 91 84<br>Du lundi au vendredi<br>9h - 18h</p>
                 </div>
                 <div class="contact-card">
-                    <h3>✉️ Email</h3>
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
                     <p>laboutiquedethaly@gmail.com<br>Service client disponible<br>sous 24h</p>
                 </div>
             </div>
@@ -242,6 +253,8 @@
         <p>TVA Intracommunautaire: FR89 214567300</p>
         <p>&copy; 2025 La Boutique de Thaly - Tous droits réservés</p>
     </footer>
+
+    <script src="main.js"></script>
 
 
 </body>
